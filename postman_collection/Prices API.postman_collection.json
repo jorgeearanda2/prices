@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "b3884929-5cf7-4905-9ae7-c3415c13f61e",
+		"name": "Prices API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1736751"
+	},
+	"item": [
+		{
+			"name": "Example 1 Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fields Test\", function() {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.content).to.not.be.null\r",
+							"    pm.expect(responseJson.content.productId).to.eql('35455');\r",
+							"    pm.expect(responseJson.content.brandId).to.eql(1);\r",
+							"    pm.expect(responseJson.content.priceList).to.eql(1);\r",
+							"    pm.expect(responseJson.content.startDateTime).to.eql('2020-06-14T00:00:00');\r",
+							"    pm.expect(responseJson.content.endDateTime).to.eql('2020-12-31T23:59:59');\r",
+							"    pm.expect(responseJson.content.price).to.eql(35.50);\r",
+							"    pm.expect(responseJson.content.currency).to.eql('EUR');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T10:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example 2 Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fields Test\", function() {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.content).to.not.be.null\r",
+							"    pm.expect(responseJson.content.productId).to.eql('35455');\r",
+							"    pm.expect(responseJson.content.brandId).to.eql(1);\r",
+							"    pm.expect(responseJson.content.priceList).to.eql(2);\r",
+							"    pm.expect(responseJson.content.startDateTime).to.eql('2020-06-14T15:00:00');\r",
+							"    pm.expect(responseJson.content.endDateTime).to.eql('2020-06-14T18:30:00');\r",
+							"    pm.expect(responseJson.content.price).to.eql(25.45);\r",
+							"    pm.expect(responseJson.content.currency).to.eql('EUR');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T16:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example 3 Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fields Test\", function() {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.content).to.not.be.null\r",
+							"    pm.expect(responseJson.content.productId).to.eql('35455');\r",
+							"    pm.expect(responseJson.content.brandId).to.eql(1);\r",
+							"    pm.expect(responseJson.content.priceList).to.eql(1);\r",
+							"    pm.expect(responseJson.content.startDateTime).to.eql('2020-06-14T00:00:00');\r",
+							"    pm.expect(responseJson.content.endDateTime).to.eql('2020-12-31T23:59:59');\r",
+							"    pm.expect(responseJson.content.price).to.eql(35.50);\r",
+							"    pm.expect(responseJson.content.currency).to.eql('EUR');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example 4 Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fields Test\", function() {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.content).to.not.be.null\r",
+							"    pm.expect(responseJson.content.productId).to.eql('35455');\r",
+							"    pm.expect(responseJson.content.brandId).to.eql(1);\r",
+							"    pm.expect(responseJson.content.priceList).to.eql(3);\r",
+							"    pm.expect(responseJson.content.startDateTime).to.eql('2020-06-15T00:00:00');\r",
+							"    pm.expect(responseJson.content.endDateTime).to.eql('2020-06-15T11:00:00');\r",
+							"    pm.expect(responseJson.content.price).to.eql(30.50);\r",
+							"    pm.expect(responseJson.content.currency).to.eql('EUR');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-15T10:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example 5 Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Fields Test\", function() {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson.content).to.not.be.null\r",
+							"    pm.expect(responseJson.content.productId).to.eql('35455');\r",
+							"    pm.expect(responseJson.content.brandId).to.eql(1);\r",
+							"    pm.expect(responseJson.content.priceList).to.eql(4);\r",
+							"    pm.expect(responseJson.content.startDateTime).to.eql('2020-06-15T16:00:00');\r",
+							"    pm.expect(responseJson.content.endDateTime).to.eql('2020-12-31T23:59:59');\r",
+							"    pm.expect(responseJson.content.price).to.eql(38.95);\r",
+							"    pm.expect(responseJson.content.currency).to.eql('EUR');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brand Not Found Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(404)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "2"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Price Not Found Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function() {\r",
+							"    pm.response.to.have.status(404)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/brands/:brandId/products/:productId/prices/:applicationDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"brands",
+						":brandId",
+						"products",
+						":productId",
+						"prices",
+						":applicationDate"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2023-06-16T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

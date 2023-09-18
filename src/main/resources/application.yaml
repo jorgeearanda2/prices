@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:prices
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console.enabled: true
+
+openapi:
+  serverUrl: ${MS_SWAGGER_HOST:http://localhost}:${MS_SWAGGER_PORT:8080}
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /prices/swagger-ui/api-docs
+  swagger-ui:
+    displayRequestDuration: true
+    tagsSorter: alpha
